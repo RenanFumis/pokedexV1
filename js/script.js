@@ -43,6 +43,13 @@ function buscarPokemon(nomeOuNumero){
   .catch(() => mostraError(nomeOuNumero));
 }
 
+document.getElementById('inputPokemon1').addEventListener('blur', function() {
+  // Aguarde um curto período antes de realizar a busca (ex: 500ms)
+  
+    buscarPokemon(1);
+    mostrarProximosPokemons();
+});
+
 //buscar o pokemon só colocando o nome e clicando no enter
 document.getElementById('inputPokemon1').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
