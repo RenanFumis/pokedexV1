@@ -2,80 +2,277 @@
   padding: 0px;
   margin: 0px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- background: #D5FF9D;
+
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.bodyContainer{
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: auto;
+  background: #D5FF9D;
 }
 
 .container{
   display: flex;
-  flex-direction: column;
-  width: 1200px;
-  text-align: center;
-  padding: 20px 0px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.cabecalho{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 50px;
+  justify-content: space-between;
 }
 
-
-
-.cartas{
-  display: grid;
-  grid-template-columns: 1fr  ;
-  margin-top: 50px;
+.logoENome{
+  display: flex;
+  align-items: center;
   gap: 20px;
-  padding: 0 100px;
+}
+
+.logoPokemon{
+  width: 50px;
+  height: 50px;
+}
+
+.btnEpesquisa{
+  background: #ECFFBF;
+  border-radius: 10px;
+  padding: 5px;
   
 }
 
-.cartas .erroDeBusca{
-  text-align: center;
-  width: 40ch;
-  margin: 50px;
-  margin-left: 300px;
-  background-color: #f1f1f1f1;
-  border-radius: 5px;
-  border: 1px solid #000000;
-}
-
 .inputNomeNumero{
-  background: #EDEDCB;
+  background: #ECFFBF;
+  border: 1px solid #F5FFDC;
+  border-radius: 10px;
   text-align: center;
-  padding: 3px;
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: .08rem;
 }
 .inputNomeNumero:focus{
   outline: none;
 }
 
-
-.btn{
-  background: #EDEDCB;
-  padding: 3px;
-  border-radius: 4px;
-  font-size: .7rem;
+.fa-search{
+  background: #ECFFBF;
+  color: rgba(117, 117, 117, .3);
+  font-size: 1.5rem;
+  margin-right: 15px;
 }
 
-.btnEpesquisa, .erroDeBusca{
+
+.pokemon-info{
+  padding: 20px;
+}
+.CardnomePokemon{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  gap: 5px;
+
+  gap: 10px;
   
 }
 
+.tipo{
+  font-size: 1.2rem;
+}
+.nomePokemon{
+  font-size: 2.5rem;
+  /* padding-top: 15px; */
+}
+
+
+.fisicoTipo{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  border-bottom: 3px dotted #ACBF7F;
+}
+
+.pokemonImg{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: end;
+  align-items: end;
+  justify-items: center;
+}
+
+.imgPokemon{
+  width: 300px;
+  height: 300px;
+}
+.numero{
+  /* position: absolute; */
+  margin-top: 0px;
+  background: transparent;
+  z-index: -1;
+  color: rgba(236, 255, 191, .7);  
+  font-size: 5rem;
+  align-items: self-end;
+}
+
+.informacoesIniciais{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 20px;
+  width: max-content;
+  
+}
+
+.infoBatalha{
+  margin-top: 10px;
+  background: #F5FFDC;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  width: 300px;
+}
+
+.infoBatalhaSeccao{
+  display: flex;
+  padding: 5px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border-bottom: 1px dotted black ;
+}
+
+.infoBatalhaSeccao{
+ display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.icon-info{
+  width: 25px;
+  height: 25px;
+}
+
+.icon-infoS{
+  width: 35px;
+  height: 35px;
+}
+
+
+#infPokemon1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+#reset{
+  font-size: 2rem;
+  cursor: pointer;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-radius: 5px;
+}
+
+#reset:hover{
+  color:#ACBF7F;
+  border-right: 4px solid #F5FFDC;
+  border-bottom: 4px solid #F5FFDC;
+  border-radius: 5px;
+}
+
+
+.mensagemErro{
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+  background-color: #F5FFDC;
+  height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.erroDeBusca{
+  width: 40ch;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+  background-color: #F5FFDC;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.rodapé{
+  display: flex;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center ;
+  font-size: 1.2rem;
+  letter-spacing: .125rem;
+}
+.portfolio:hover{
+  color:#ACBF7F;
+}
+
+@media (max-width: 800px){
+
+.inputNomeNumero, .fa-search{
+  font-size: .8rem;
+}
+.btnEpesquisa{
+  height: 20px;
+}
+
+.pokemon-info, .informacoesIniciais{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.mensagemErro{
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.erroDeBusca{
+  font-size: 1rem;
+  width: 20ch;
+  height: max-content;
+}
+
+}
+
+@media (max-width: 500px){
+  .cabecalho{
+    gap: 20px;
+  }
+
+  .nomePokemon{
+    font-size: 1.8rem;
+  }
+.tipo{
+  font-size: 1rem;
+}
+.infoBatalhaSeccao{
+  font-size: .875rem;
+}
+.icon-info{
+  width: 15px;
+  height: 15px;
+}
 .imgPokemon{
   width: 150px;
   height: 150px;
 }
-
-.idPokemon{
-  padding: 10px;
+.numero{
+  font-size: 3rem;
 }
-
-p{
-  padding-top: 5px;
-  
+.infoBatalha{
+  width: 200px;
 }
-
-footer{
-  text-align: center;
 }

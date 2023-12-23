@@ -6,46 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap">
-  <link rel="shortcut icon" href="./css/img/pokemon.png" type="image/x-icon">
-
+  <link rel="shortcut icon" href="./css/img/psyduck.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Pokedex</title>
 </head>
 
-<body>
-
-  <div class="container">
-    <h1>Procure o Pokémon</h1>
-
-    <div class="cartas">
-
-      <!-- <div class="carta-um"></div> -->
-
-      <div class="carta-dois">
-        <div class="btnEpesquisa">
-          <input class="inputNomeNumero" type="text" id="inputPokemon1" placeholder="Nome do Pokémon">
-          <button class="btn" onclick="buscarPokemon(1)">Buscar Pokemon</button>
-        </div>
-        <div id="infPokemon1" >
-          
-        </div>
-        
-      </div>
-
-
-      <!-- <div class="carta-tres">
-
-        <div class="btnEpesquisa">
-        <input class="inputNomeNumero" type="text" id="inputPokemon2" placeholder="Nome do Pokémon">
-        <button class="btn" onclick="buscarPokemon(2)">Buscar Pokemon</button>
-      </div>
-        <div id="infPokemon2"></div>
-      </div> -->
-
+<body class="bodyContainer">
+  <div class="cabecalho ">
+    <picture class="logoENome">
+      <img src="./css/img/estrela.png" alt="" class="logoPokemon">
+      <h3 id="reset">Pokedex</h3>
+    </picture>
+    <div class="btnEpesquisa">
+      <input class="inputNomeNumero " type="text" id="inputPokemon1" placeholder="Nome do Pokémon">
+      <i class="fa fa-search" aria-hidden="true"></i>
     </div>
+
   </div>
 
+  <div class="container">
 
-<!-- <footer>Desenvolvido por Renan Fumis</footer> -->
+    <div id="infPokemon1" class="pokemon-info">
+
+      <div class="informacoesIniciais">
+
+        <div class="CardnomePokemon">
+          <p class="tipo"></p>
+          <h2 class="nomePokemon"></h2>
+
+          <div class="fisico">
+            <div class="fisicoTipo">
+              <p>Peso: </p> <span class="peso "></span>
+            </div>
+            <div class="fisicoTipo">
+              <p>Altura: </p><span class="altura"></span>
+            </div>
+          </div>
+        </div>
+
+        <picture class="pokemonImg">
+          <img class="imgPokemon" src="" alt="Imagem do Pokémon">
+          <p class="numero"></p>
+        </picture>
+
+
+
+      </div>
+
+      <div class="infoBatalha">
+        <div class="infoBatalhaSeccao">
+          <p>Hp: <img src="./css/img/saude.png" alt="" class="icon-info"></p><span class="hp"></span>
+        </div>
+        <div class="infoBatalhaSeccao">
+          <p>Ataque: <img src="./css/img/golpear.png" alt="" class="icon-info"></p><span class="ataque"></span>
+        </div>
+        <div class="infoBatalhaSeccao">
+          <p>Defesa: <img src="./css/img/escudo.png" alt="" class="icon-info"></p><span class="defesa"></span>
+        </div>
+        <div class="infoBatalhaSeccao">
+          <p>Ataque-Especial: <img src="./css/img/espada.png" alt="" class="icon-info"></p><span class="ataque-especial"></span>
+        </div>
+        <div class="infoBatalhaSeccao">
+          <p>Defesa-Especial: <img src="./css/img/maisEscudo.png" alt="" class="icon-info"></p> <span class="defesa-especial"></span>
+        </div>
+        <div class="infoBatalhaSeccao">
+          <p>Velocidade: <img src="./css/img/velocidade.png" alt="" class="icon-info"></p><span class="velocidade"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="rodapé">
+  <footer>Desenvolvido por <a href="https://github.com/RenanFumis" target="_blank" class="portfolio">Renan Fumis</a></footer>
+</div>
   <script src="./js/script.js"></script>
 </body>
 
