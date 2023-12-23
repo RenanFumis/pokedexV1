@@ -1,0 +1,81 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ background: #D5FF9D;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+
+
+.cartas{
+  display: grid;
+  grid-template-columns: 1fr  ;
+  margin-top: 50px;
+  gap: 20px;
+  padding: 0 100px;
+  
+}
+
+.cartas .erroDeBusca{
+  text-align: center;
+  width: 40ch;
+  margin: 50px;
+  margin-left: 300px;
+  background-color: #f1f1f1f1;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.inputNomeNumero{
+  background: #EDEDCB;
+  text-align: center;
+  padding: 3px;
+  font-size: 1rem;
+  letter-spacing: .08rem;
+}
+.inputNomeNumero:focus{
+  outline: none;
+}
+
+
+.btn{
+  background: #EDEDCB;
+  padding: 3px;
+  border-radius: 4px;
+  font-size: .7rem;
+}
+
+.btnEpesquisa, .erroDeBusca{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  
+}
+
+.imgPokemon{
+  width: 150px;
+  height: 150px;
+}
+
+.idPokemon{
+  padding: 10px;
+}
+
+p{
+  padding-top: 5px;
+  
+}
+
+footer{
+  text-align: center;
+}
