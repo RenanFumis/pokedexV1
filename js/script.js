@@ -34,9 +34,9 @@ function buscarPokemon(nomeOuNumero){
   fetch(urlAPIpokemon)
   .then(r => {
     if (!r.ok) {
-      throw new Error('Pokemon not found'); // Gera um erro para ser capturado no bloco catch
+      throw new Error('Pokemon não encontrado'); // Gera um erro para ser recebido no catch
     }
-    return r.json();
+    return r.json()
   })
   .then(dadosPokemon => mostrarPokemon(dadosPokemon, nomeOuNumero))
   
