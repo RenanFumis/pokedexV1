@@ -44,10 +44,15 @@ function buscarPokemon(nomeOuNumero){
 }
 
 document.getElementById('inputPokemon1').addEventListener('blur', function() {
-  // Aguarde um curto período antes de realizar a busca (ex: 500ms)
-  
-    buscarPokemon(1);
-    mostrarProximosPokemons();
+ 
+  const valorInput = this.value.trim().toLowerCase()
+   // Caso não possua valor no input o clique fora não funcionará
+  if(valorInput !== ''){
+
+    buscarPokemon(1)
+    mostrarProximosPokemons()
+
+}
 });
 
 //buscar o pokemon só colocando o nome e clicando no enter
@@ -56,7 +61,6 @@ document.getElementById('inputPokemon1').addEventListener('keydown', function(ev
     buscarPokemon(1)
   }
 })
-
 
 
 //Mostrar as informaçoes do pokemon
@@ -72,7 +76,7 @@ function mostrarPokemon(dadosPokemon, nomeOuNumero) {
   // Preenchendo as tags HTML com os dados do Pokémon
   infoDiv.querySelector('h2').textContent = dadosPokemon.name.toUpperCase()
 
-  infoDiv.querySelector('.tipo').textContent = `Tipo: ${traduzirTipos(dadosPokemon.types)}`//Aqui puxei as traduções
+  infoDiv.querySelector('.tipo').textContent = `Tipo: ${traduzirTipos(dadosPokemon.types)}`//Aqui puxa as traduções
 
 
   infoDiv.querySelector('.imgPokemon').src = dadosPokemon.sprites.other['dream_world'].front_default
